@@ -79,6 +79,19 @@ test(auth): add edge cases for expired tokens
 - Run commands: `uv run <command>`
 - Never manually edit dependency lists in `pyproject.toml`
 
+### After any Python file change
+
+Always run the local tools before committing:
+
+```bash
+uv run ruff check --fix .
+uv run ruff format .
+uv run mypy .
+uv run pytest
+```
+
+Fix all errors before proceeding.
+
 ---
 
 ## GitHub
