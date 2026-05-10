@@ -1,4 +1,4 @@
-from scripts.complete_task import complete
+from template.scripts.complete_task import complete
 
 SAMPLE = """\
 ## Phase 1

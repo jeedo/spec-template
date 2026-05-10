@@ -101,25 +101,3 @@ Run from the project root:
 | `renumber_tasks.py` | `python scripts/renumber_tasks.py` | Restore sequential numbering after adding/removing tasks |
 | `complete_task.py` | `python scripts/complete_task.py <N>` | Mark task N as complete |
 | `get_phase_tasks.py` | `python scripts/get_phase_tasks.py <phase>` | List tasks for a phase (by name or number) |
-
----
-
-## Template Repository Structure
-
-This repository (`spec-template`) is itself a template. The `template/` folder contains everything that gets copied into a new project:
-
-```
-template/
-├── CLAUDE.md                  ← workflow instructions (this file)
-├── .github/workflows/ci.yml   ← CI workflow stub
-├── docs/
-│   ├── architecture.md        ← blank architecture template
-│   ├── plan.md                ← blank plan template
-│   └── research.md            ← blank research notes template
-└── scripts/
-    ├── renumber_tasks.py
-    ├── complete_task.py
-    └── get_phase_tasks.py
-```
-
-When starting a new project, copy the contents of `template/` into the new repo root.

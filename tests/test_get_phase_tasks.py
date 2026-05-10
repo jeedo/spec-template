@@ -1,4 +1,4 @@
-from scripts.get_phase_tasks import get_tasks
+from template.scripts.get_phase_tasks import get_tasks
 
 SAMPLE = """\
 ## Phase 1: Setup

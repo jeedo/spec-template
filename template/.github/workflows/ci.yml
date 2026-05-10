@@ -30,7 +30,7 @@ jobs:
         run: uv run ruff format --check .
 
       - name: Type check
-        run: uv run mypy template/scripts/
+        run: uv run mypy src/
 
       - name: Test
         run: uv run pytest -v

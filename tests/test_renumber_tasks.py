@@ -1,4 +1,4 @@
-from scripts.renumber_tasks import renumber
+from template.scripts.renumber_tasks import renumber
 
 SAMPLE = """\
 ## Phase 1: Setup
