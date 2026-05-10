@@ -22,7 +22,7 @@ TBD_RE = re.compile(r"\bTBD\b", re.IGNORECASE)
 
 
 def _section_has_content(lines: list[str], section: str) -> bool:
-    """Return True if the ## section contains at least one non-blank, non-header line."""
+    """Return True if the ## section has at least one non-blank, non-header line."""
     inside = False
     for line in lines:
         if line.startswith("## ") and section in line:
@@ -71,7 +71,8 @@ def check_plan(path: Path) -> list[str]:
     for line_no, task_no in task_numbers:
         if task_no != expected:
             errors.append(
-                f"plan.md:{line_no}: numbering error — expected {expected}, got {task_no}"
+                f"plan.md:{line_no}: numbering error — expected {expected},"
+                f" got {task_no}"
             )
         expected = task_no + 1
 
