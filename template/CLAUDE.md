@@ -6,6 +6,8 @@ Always read at the beginning of every session:
 - [`docs/architecture.md`](docs/architecture.md) — system design and decisions
 - [`docs/plan.md`](docs/plan.md) — phased task list with completion status
 
+Then run `python scripts/check_docs.py` and surface any failures to the user before proceeding.
+
 ---
 
 ## Starting a New Project
@@ -98,6 +100,7 @@ Run from the project root:
 
 | Script | Usage | Description |
 |--------|-------|-------------|
+| `check_docs.py` | `python scripts/check_docs.py` | Validate architecture.md and plan.md (required sections, numbering, TBD markers) |
 | `renumber_tasks.py` | `python scripts/renumber_tasks.py` | Restore sequential numbering after adding/removing tasks |
 | `complete_task.py` | `python scripts/complete_task.py <N>` | Mark task N as complete |
 | `get_phase_tasks.py` | `python scripts/get_phase_tasks.py <phase>` | List tasks for a phase (by name or number) |
