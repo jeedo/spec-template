@@ -40,9 +40,9 @@ When the user asks to implement a task from `docs/plan.md`:
 2. Create a branch: `git checkout -b feature/<task-number>-<short-slug>`
 3. **Write tests first** — run them and confirm they **fail** (red phase)
 4. Implement the feature until all tests pass (green phase)
-5. Commit using a conventional commit message
-6. Push and open a PR: `gh pr create`
-7. Mark the task complete: `python scripts/complete_task.py <task-number>`
+5. Mark the task complete: `python scripts/complete_task.py <task-number>`
+6. Commit using a conventional commit message (includes the updated `docs/plan.md`)
+7. Push and open a PR: `gh pr create`
 
 ---
 
