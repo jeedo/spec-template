@@ -1,0 +1,27 @@
+[project]
+name = "spec-template"
+version = "0.1.0"
+description = "Template for spec-driven LLM development with Claude"
+readme = "README.md"
+requires-python = ">=3.11"
+
+[dependency-groups]
+dev = [
+    "mypy>=1.10",
+    "pytest>=8.0",
+    "ruff>=0.6",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+
+[tool.ruff]
+line-length = 88
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
