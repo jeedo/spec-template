@@ -106,7 +106,7 @@ Run from the project root:
 
 ## Template Repository Structure
 
-This repository (`spec-template`) is itself a template. The `template/` folder contains everything that gets copied into a new project:
+This repository (`spec-template`) is itself a template. The `template/` folder contains everything that gets bootstrapped into a new project:
 
 ```
 template/
@@ -122,4 +122,28 @@ template/
     └── get_phase_tasks.py
 ```
 
-When starting a new project, copy the contents of `template/` into the new repo root.
+### Using the template in a new project
+
+Download and extract the latest release asset into the project root:
+
+```bash
+curl -L https://github.com/jeedo/spec-template/releases/latest/download/template.tar.gz | tar -xz
+```
+
+To pin to a specific version, replace `latest/download` with `download/v<version>`.
+
+---
+
+## Releasing a New Version
+
+Releases are fully automated via `.github/workflows/release.yml`. To publish a new version:
+
+1. Ensure all changes are merged to `main`
+2. Tag the commit and push:
+   ```bash
+   git tag v<version> && git push origin v<version>
+   ```
+3. The workflow will:
+   - Package the `template/` folder as `template.tar.gz`
+   - Create a GitHub release named after the tag with auto-generated notes
+   - Attach `template.tar.gz` as a downloadable release asset

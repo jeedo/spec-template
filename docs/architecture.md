@@ -1,7 +1,7 @@
 # Architecture: spec-template
 
 > **Status**: Approved
-> **Last Updated**: 2026-05-10
+> **Last Updated**: 2026-05-10 (release workflow + consumer download docs added)
 
 ## Overview & Goals
 
@@ -40,6 +40,9 @@ Python utilities Claude uses to maintain `docs/plan.md` integrity:
 
 ### .github/workflows/ci.yml
 Runs ruff lint, ruff format check, mypy type checking, and pytest on every push and pull request to `main`.
+
+### .github/workflows/release.yml
+Triggered on any `v*` tag push. Packages the `template/` directory as `template.tar.gz` and publishes it as a GitHub release asset with auto-generated release notes. This is the distribution mechanism — consumers download the tarball rather than cloning the repo.
 
 ## Data Model / API
 
